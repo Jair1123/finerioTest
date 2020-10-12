@@ -15,7 +15,7 @@
             <div class="col-md-4 offset-md-4 mb-5">
                 <div class="card animated flipInY mt-5 mb-5">
                     <div class="card-header bg-dark text-white text-center">
-                        <h3>Log in</h3>
+                        <h3>ERROR</h3>
                     </div>
                     <div class="card-body">
                         <form action="">
@@ -38,34 +38,7 @@
         </div>
     </div>
     <%- include("./partials/footer.html") %>
-    <script>
-        function obtenerDatos() {
-            var email = document.getElementById('email').value;
-            var pd = document.getElementById('password').value;
-            console.log(email);
-            console.log(pd);
-
-            var url = 'https://api.finerio.mx/api/login';
-            var data = {
-                "username": email,
-                "password": pd
-            };
-
-            fetch(url, {
-                    method: 'POST', // or 'PUT'
-                    body: JSON.stringify(data), // data can be `string` or {object}!
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-
-                }).then(res => res.json())
-                .then(res => location.href = "signin")
-                .catch(error => location.href = "modal")
-                .then(response => console.log('Success:', response))
-                //.then(response => response.json('Token:',response))
-            
-        }
-    </script>
+    
 </body>
 
 </html>

@@ -13,4 +13,8 @@ router.get('/signin', (req, res) => {
   res.render('signin.html', { title: 'Movimientos Page' });
 });
 
+router.get('/modal', (req, res) => {
+  res.render('modal.html', { title: 'Error Page' });
+});
+
 module.exports = router;
