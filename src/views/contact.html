@@ -40,6 +40,7 @@
     <%- include("./partials/footer.html") %>
     <script>
         function obtenerDatos() {
+            var obj;
             var email = document.getElementById('email').value;
             var pd = document.getElementById('password').value;
             console.log(email);
@@ -58,12 +59,15 @@
                         'Content-Type': 'application/json'
                     }
 
-                }).then(res => res.json())
-                .then(res => location.href = "signin")
+                })
+                .then(res => res.json())
+                //.then(res => location.href = "signin")
+                .then(data => obj = data)
                 .catch(error => location.href = "modal")
-                .then(response => console.log('Success:', response))
-                //.then(response => response.json('Token:',response))
-            
+                .then(response => console.log('Success:', response))   
+                //.then(response => console.log('Success:', response.access_token))   
+                .then(() => console.log(obj.access_token))
+                    
         }
     </script>
 </body>

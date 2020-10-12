@@ -2,43 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <%- include("./partials/head.html") %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <%- include("./partials/head.html") %>
 </head>
 
 <body>
-    <%- include("./partials/navigation.html") %>
-    <div class="container p-5  container-cont">
-        <div class="row">
-            <div class="col-md-4 offset-md-4 mb-5">
-                <div class="card animated flipInY mt-5 mb-5">
-                    <div class="card-header bg-dark text-white text-center">
-                        <h3>ERROR</h3>
-                    </div>
-                    <div class="card-body">
-                        <form action="">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="email" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="password" placeholder="Contraseña">
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary btn-block" type="button" onclick="obtenerDatos()"
-                                    id="post-btn">
-                                    Entrar
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+  <%- include("./partials/navigation.html") %>
+  <div class="container p-5  container-cont">
+    <div class="row">
+      <div class="col-md-4 offset-md-4 mb-5">
+        <div class="card animated flipInY mt-5 mb-5">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Error</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Usuario o contraseña Incorrecta</h6>
+              <p class="card-text">La contraseña o el usuario es incorrecto o no se encuentra registrado en la aplicacion de finerio.</p>
+              <a href="/contact" class="card-link">Sign in</a>
+              <a href="/" class="card-link">Home</a>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <%- include("./partials/footer.html") %>
-    
+  </div>
+  <%- include("./partials/footer.html") %>
+
 </body>
 
 </html>
